@@ -1,54 +1,76 @@
-# Week3
+# Week 3 - Challenge 1
 
-Código de Week1 del bootcamp
+GoT DOM
+Tendrás que programar un interfaz de usuario para que refleje el siguiente modelo de datos.
 
-- TS...
+Modelo de datos
+En Juego de Tronos existen personajes. Todos esos personajes tienen la siguiente información:
 
-## Installation
+Nombre
+Familia a la que pertenece
+Edad
+Estado (vivo o muerto, aunque inicialmente todos están vivos)
+Todos los personajes pueden realizar la acción de comunicar, pero cada tipo de personaje (no cada personaje) se comunica de un modo distinto. Nota: este método devuelve el string con la frase, no imprime por consola.
 
-- TS
+Todos los personajes pueden realizar la acción de morir, cambiándose su estado a muerto.
 
-```shell
-npm i -D typescript
-```
+Todos los personajes pertenecen a la misma serie, "Juego de Tronos".
 
-- config TS
+Cada uno de esos personajes puede ser un rey, un luchador, un asesor, o un escudero.
 
-```shell
-npx tsc --init
-```
+Un rey, además de la información que tiene por ser personaje, tiene la siguiente información:
 
-- eslint & TS
+Años de reinado
+Cuando se comunica dice: "Vais a morir todos"
+Un luchador, además de la información que tiene por ser personaje, tiene la siguiente información:
 
-```shell
-npx eslint --init
+Arma que usa
+Destreza (un valor entre 0 y 10)
+Cuando se comunica dice: "Primero pego y luego pregunto"
+Un asesor, además de la información que tiene por ser personaje, tiene la siguiente información:
 
-Consecuencia
-npm i -D eslint @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-xo
-```
+Personaje al que asesora (que puede ser rey, luchador, asesor o escudero)
+Cuando se comunica dice: "No sé por qué, pero creo que voy a morir pronto"
+Un escudero, además de la información que tiene por ser personaje, tiene la siguiente información:
 
-- eslint + prettier
+Personaje al que sirve (que sólo puede ser luchador)
+Grado de servilismo (un valor entre 0 y 10)
+Cuando se comunica dice: "Soy un loser"
+Conjunto de datos
+Crea los siguientes archivos JS y haz que funcionen como módulos mediante import y export:
 
-```shell
-npm i -D eslint-config-prettier
-```
+Personaje.js, Rey.js, Luchador.js, Asesor.js, Escudero.js (mete dentro cada clase)
+personajes.js (crea dentro un array con los personajes
+Joffrey Baratheon (rey),
+Jaime Lannister (luchador),
+Daenerys Targaryen (luchadora),
+Tyrion Lannister (asesor de Daenerys) y
+Bronn (escudero de Jaime).)
+index.js (aquí va todo el resto del enunciado, y éste será el punto de entrada)
+Creación del interface
+Haz que por cada personaje del array se muestre la ficha correspondiente en el navegador:
 
-- Jest
+En el elemento con clase emoji tiene que aparecer uno de estos emojis dependiendo del tipo de personaje: 👑 🗡 🎓 🛡
+Si el personaje está muerto, su foto debe aparecer cabeza abajo (haz el CSS necesario);
+En la lista con clase metadata, haz que sólo aparezcan los li correspondientes al personaje.
+Cuando el usuario haga clic en el botón "muere", tiene que cambiar el estado del personaje, y la interfaz debe reflejar el cambio.
 
-```shell
+Cuando el usuario haga clic en el botón "habla", el elemento con clase comunicaciones debe aparecer con el texto y la imagen correspondientes. Haz que este elemento comunicaciones tenga la clase on durante 2 segundos y luego se le quite.
 
-npm i -D jest ts-jest @types/jest @types/node jest-ts-webcompat-resolver
+GoT DOM
+Tendrás que completar un interfaz de usuario para que refleje el modelo de datos creado.
 
-```
+Creación del interface
+Haz que por cada personaje del array se muestre la ficha correspondiente en el navegador:
 
-jest-DOM environment
+En el elemento con clase emoji tiene que aparecer uno de estos emojis dependiendo del tipo de personaje: 👑 🗡 🎓 🛡
+Si el personaje está muerto, su foto debe aparecer cabeza abajo (haz el CSS necesario);
+En la lista con clase metadata, haz que sólo aparezcan los li correspondientes al personaje.
+Cuando el usuario haga clic en el botón "muere", tiene que cambiar el estado del personaje, y la interfaz debe reflejar el cambio.
 
-```shell
-npm i -D jest-environment-jsdom 
-```
+Cuando el usuario haga clic en el botón "habla", el elemento con clase comunicaciones debe aparecer con el texto y la imagen correspondientes. Haz que este elemento comunicaciones tenga la clase on durante 2 segundos y luego se le quite.
 
-Testing-library
+Testa las clases del modelo de datos.
 
-```shell
-npm i -D @testing-library/dom @testing-library/jest-dom @testing-library/user-event
-```
+Opción
+Puedes crear componentes basados en clases de vanilla TS
