@@ -9,7 +9,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "build:ts": "tsc -w",
-    "test": "jest --watchAll --coverage",
+    "test": "jest --watchAll --coverage --passWithNoTests",
     "prepare": "husky install",
     "sass": "sass scss:css -w --no-source-map"
   },
